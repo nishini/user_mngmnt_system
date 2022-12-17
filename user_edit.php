@@ -340,52 +340,52 @@ if (isset($_GET['del_st'])) {
 
 
 
-  // $("#edit").click(function() {
-  //   alert('test');
+  $("#edit").click(function() {
+    alert('test');
 
-  //   var name_up = $("#name_up").val();
-  //   var address_up = $("#address_up").val();
-  //   var email_up = $("#email_up").val();
-  //   var nic_up = $("#nic_up").val();
-  //   var tel_no_up = $("#tel_no_up").val();
-  //   var contact_no2_up = $("#contact_no2_up").val();
-  //   var uname_up = $("#uname_up").val();
-  //   // var password_up = $("#password_up").val();
-  //   var img_up = $("#img_up").val();
-  //   // var img_up = $("#img_up").val();
+    var name_up = $("#name_up").val();
+    var address_up = $("#address_up").val();
+    var email_up = $("#email_up").val();
+    var nic_up = $("#nic_up").val();
+    var tel_no_up = $("#tel_no_up").val();
+    var contact_no2_up = $("#contact_no2_up").val();
+    var uname_up = $("#uname_up").val();
+    // var password_up = $("#password_up").val();
+    var img_up = $("#img_up").val();
+    // var img_up = $("#img_up").val();
 
-  //   $.post('connection/users_fun.php', {
-  //     edit_users: 'data',
-  //     name_up: name_up,
-  //     address_up: address_up,
-  //     email_up: email_up,
-  //     nic_up: nic_up,
-  //     tel_no_up: tel_no_up,
-  //     contact_no2_up: contact_no2_up,
-  //     uname_up: uname_up,
-      
-  //     img_up: img_up,
+    $.post('connection/users_fun.php', {
+      edit_users: 'data',
+      name_up: name_up,
+      address_up: address_up,
+      email_up: email_up,
+      nic_up: nic_up,
+      tel_no_up: tel_no_up,
+      contact_no2_up: contact_no2_up,
+      uname_up: uname_up,
+      // password_up: password_up,
+      img_up: img_up,
 
-  //       }, //pass data to database
+        }, //pass data to database
 
-  //       function(data) {
-  //         if (data.msgType === 1) {
-  //           swal({
-  //             title: "Success!",
-  //             text: "Successfuly Added!",
-  //             type: "success"
-  //           }).then(okay => {
-  //             if (okay) {
-  //               window.reload();
-  //             }
-  //           });
+        function(data) {
+          if (data.msgType === 1) {
+            swal({
+              title: "Success!",
+              text: "Successfuly Added!",
+              type: "success"
+            }).then(okay => {
+              if (okay) {
+                window.reload();
+              }
+            });
 
-  //         } else {
-  //           swal("Something Went Wrong", "Please Try Again!", "warning");
-  //         }
+          } else {
+            swal("Something Went Wrong", "Please Try Again!", "warning");
+          }
 
-  //       }, "json");
-  // });
+        }, "json");
+  });
 </script>
 
 </body>

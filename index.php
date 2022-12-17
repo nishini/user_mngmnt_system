@@ -82,6 +82,9 @@ input[type=text], input[type=password]{
 <div class="form-area">
   <form action="connection/login_fun.php" method="post">
     <h1>ADMIN LOGIN</h1>
+      <?php if(isset($_GET['error'])){?>
+      <p  class="error"><?php echo $_GET['error'] ?></p>
+    <?php } ?>
    
     <p>Email</p>
     <input type="text" placeholder="Enter Email" name="user" >

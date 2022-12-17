@@ -70,4 +70,18 @@ if(isset($_POST['name'])) {
 }
 }
 
+
+
+/****************************** GET DATA *************************************/
+
+if (array_key_exists('get_dataset', $_POST)) {
+    $id = htmlspecialchars(strip_tags(trim($_POST['id'])), ENT_QUOTES, 'UTF-8');
+
+    $sql = mysqli_query($conn, "SELECT * FROM users WHERE id=$id AND is_admin=1"); 
+    $row = mysqli_fetch_assoc($sql);
+
+    echo json_encode($row);
+} 
+
+
 ?>

@@ -229,6 +229,69 @@ if (empty($log)) {
 <link rel="stylesheet" href="js/demo/sweetalert/sweetalert.css" />
 
 
+<?php
+if (isset($_GET['status'])) {
+  $status = $_GET['status'];
+  if ($status == 1) {
+    ?>
+    <script>
+      swal({
+        title: "Success!",
+        text: "Successfuly Added!",
+        type: "success"
+      }).then(okay => {
+        if (okay) {
+          window.location.href = "add_users.php";
+        }
+      });
+    </script>
+    <?php
+  } else if ($status == 0) {
+    ?>
+
+    <script>
+      swal({
+        title: "Error!",
+        text: "Something Went Wrong!",
+        type: "error"
+      }).then(okay => {
+        if (okay) {
+          window.location.href = "add_users.php";
+        }
+      });
+    </script>
+    <?php
+  } elseif ($status == 2) { ?>
+
+    <script>
+      swal({
+        title: "Error!",
+        text: "Genre Name Already Exist!",
+        type: "error"
+      }).then(okay => {
+        if (okay) {
+          window.location.href = "add_users.php";
+        }
+      });
+    </script>
+    <?php
+  } elseif ($status == 3) { ?>
+
+    <script>
+      swal({
+        title: "Error!",
+        text: "Image not Uploaded!",
+        type: "error"
+      }).then(okay => {
+        if (okay) {
+          window.location.href = "add_users.php";
+        }
+      });
+    </script>
+  <?php }
+} ?>
+
+
 
 
 
